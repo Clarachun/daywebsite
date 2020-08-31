@@ -20,7 +20,7 @@ h6, .h6 {
 }
 
 .first-word {
-  color: #fca86a;
+  color: #cf5353;
 }
 
 /*
@@ -242,6 +242,7 @@ h6, .h6 {
 }
 #text-large-latest {
   font-size: 25px;
+  font-family: 'Yeseva One', cursive;
 }
 #small-latest-caption {
   position: absolute;
@@ -251,6 +252,10 @@ h6, .h6 {
   padding-right: 15px;
   text-align: right;
   color: white;
+  z-index: 998;
+}
+#text-small-latest {
+  font-family: 'Yeseva One', cursive;
 }
 .newestbigpost {
   width: 575px;
@@ -313,41 +318,50 @@ h6, .h6 {
 
 #latest-sub {
   width: 390px;
-  height: 100px;
-  float: left;
+  height: fit-contet;
+  float: left
 }
 .latest-sub-section {
   width: 1170px;
   height: fit-content;
   margin-top: 25px;
+  overflow: auto;
 }
 .sub-image {
-    height: 100px;
-    width: 100px;
+    height: 175px;
+    width: 300px;
     overflow: hidden;
-    float: left;
+    margin: auto;
 }
 #top-sub-section, #bottom-sub-section {
   width: 1170px;
-  height: 100px;
+  height: fit-content;
+  overflow: auto;
 }
 #top-sub-section {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 #sub-latest-caption {
-  height: 52px;
-  margin-left: 100px;
-  width: 290px;
-  padding-left: 15px;
-  margin-top: 24px;
+  width: 300px;
+  margin: auto;
+  margin-top: 15px;
+  z-index: 998;
 }
 #text-sub-latest {
-  text-decoration: underline;
+  font-family: 'Yeseva One', cursive;
+  margin-bottom: 5px;
+  font-size: 25px;
+  color: #8b3131;
 }
 #small-latest-author {
   font-size: 15px;
 }
-
+#text-desc-latest {
+  margin-bottom: 5px;
+}
+#time {
+  color:#8b3131;
+}
 .button {
   width: 300px;
   height: 50px;
@@ -514,8 +528,9 @@ button.button.subscribe {
 }
 #instacontainer {
     width: 900px;
-    height: 900px;
+    height: fit-content;
     margin: auto;
+    overflow: auto;
 }
 .innerinsta {
   height: 275px;
@@ -552,6 +567,12 @@ button.button.subscribe {
   background-color: #8b3131;
 }
 
+.instaimagecontain {
+  width: 275px;
+  height: 275px;
+  position: absolute;
+  overflow: hidden;
+}
 
 .endimage {
   margin-right: 0px;
@@ -584,6 +605,8 @@ button.button.subscribe {
   margin-top: 50px;
   height: 530px;
   font-family: 'Yeseva One', cursive;
+  width: 50%;
+  float: left;
 }
 #background-nav {
   background-color: #fca86a;
@@ -636,7 +659,8 @@ button.button.subscribe {
 */
 .popular {
   margin-top: 50px;
-  height: 600px;
+  height: fit-content;
+  overflow: auto;
 }
 .poppost {
   float: left;
@@ -644,6 +668,7 @@ button.button.subscribe {
   text-align: right;
   padding-right: 15px;
   padding-top: 5px;
+  padding-left: 15px;
 }
 .popimage {
   width: 300px;
@@ -652,9 +677,12 @@ button.button.subscribe {
 .firstpop {
   margin-left: 0px;
 }
-.popstory {
+.popstory, .popstory:hover {
   text-decoration: none;
   color: black;
+  width: 261.375px;
+  height: 90px;
+  overflow: hidden;
 }
 .verticalline {
   height: 100px;
@@ -662,18 +690,95 @@ button.button.subscribe {
   width: 1.5px;
   float: left;
 }
+.poptitle {
+  font-size: 21px;
+  font-family: 'Yeseva One', cursive;
+  height: 55.2px;
+  overflow: hidden;
+}
+
+.popauthor, .popdate {
+  font-size: 15px;
+}
+#partone-pop {
+  height: fit-content;
+  overflow: auto;
+}
+#popback {
+  z-index: -1;
+  height: 115%;
+  overflow: auto;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  background-color: #feebc6;
+  margin-top: -30px;
+}
+
+#parttwo {
+  width: 50%;
+  float: left;
+  margin-top: 100px;
+  padding-left: 50px;
+}
+#popsmalltitle {
+  font-weight: bolder;
+  font-size: 13px;
+}
+#popopinons, #popstories, #popart {
+  height: fit-content;
+  overflow: auto;
+  margin-bottom: 20px;
+}
+#popoppost, #popstopost, #popartpost {
+    text-align: center;
+    width: 178px;
+    float: left;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+#popoptitle, #popstotitle, #poparttitle {
+  font-family: 'Yeseva One', cursive;
+  font-size: 20px;
+}
+#popopdate, #popopauthor, #popstodate, #popstoauthor, #popartdate, #popartauthor {
+    font-size: 13px;
+}
+#popline {
+  height: 1px;
+  width: 100%;
+  position: relative;
+  background-color: black;
+  margin-top: 119px;
+}
 
 /*
 * Footer
 */
-
-.blog-footer {
-  padding: 40px 0;
-  color: #999;
-  text-align: center;
-  background-color: #f9f9f9;
-  border-top: 1px solid #e5e5e5;
+#blog-footer {
+    height: 400px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    margin-top: 75px;
+    background-color: #feebc6;
 }
-.blog-footer p:last-child {
-  margin-bottom: 0;
+#blogcontainer {
+  width: 1200px;
+  margin: auto;
+  margin-top: 50px;
+}
+#disclaimer {
+  padding-right: 20px;
+}
+#disclaimer, #socialmedialinks {
+  width: 50%;
+  float: left;
+}
+#name {
+  font-family: 'Yeseva One', cursive;
+  font-size: 60px;
+}
+#description {
+  font-size: 18px;
 }
